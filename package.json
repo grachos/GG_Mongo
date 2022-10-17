@@ -1,0 +1,18 @@
+{
+  "name": "gg_mongo",
+  "version": "1.0.0",
+  "description": "Proyecto mision TIC Node JS express y mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Graziany Gomez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "morgan": "^1.10.0"
+  }
+}

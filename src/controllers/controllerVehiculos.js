@@ -15,7 +15,7 @@ const vehiculoSave = async (req, res) =>  {
 //Listar
 const vehiculosList = async (req, res) => {
     try {
-        const listaVehiculos = await Vehiculo.find(); 
+        const listaVehiculos = await vehiculos.find();
         res.status(200).send(listaVehiculos); 
     } catch (error) {
         console.error(error); 
@@ -27,7 +27,7 @@ const vehiculoXid = async (req, res) => {
     try {
         const id = req.params.id; 
         if(id){
-            const vehiculo = await Vehiculo.findById(id);
+            const vehiculo = await vehiculos.findById(id);
             res.status(200).send(vehiculo);  
         }
         else{

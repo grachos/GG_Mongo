@@ -38,8 +38,31 @@ const vehiculoXid = async (req, res) => {
     }
 }
 
+const vehiculoEdit = async(req, res)=>{
+    try {
+        const id = req.params.id;
+        const vehiculo = req.body;
+        await vehiculos.findByIdAndUpdate(id, vehiculo);
+        res.send("Vehiculos actualizado correctamente");
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const vehiculoDelete = async(req, res)=>{
+    try {
+        const id = req.params.id;
+        await vehiculos.findByIdAndDelete(id);
+        res.send("Vehiculos eliminado correctamente");
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 module.exports = {
     vehiculoSave, 
     vehiculosList,
-    vehiculoXid
+    vehiculoXid,
+    vehiculoEdit,
+    vehiculoDelete
 }

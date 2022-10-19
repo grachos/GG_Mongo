@@ -12,4 +12,8 @@ routerVehiculos.get("/list", controlVehiculo.vehiculosList);
 
 routerVehiculos.get("/find/:id", controlVehiculo.vehiculoXid); 
 
+routerVehiculos.put("/update/:id", controlVehiculo.vehiculoEdit);
+
+routerVehiculos.delete("/del/:id", controlVehiculo.vehiculoDelete);
+
 module.exports = routerVehiculos; 

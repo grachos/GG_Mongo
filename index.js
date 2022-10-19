@@ -9,7 +9,7 @@ app.listen(port, ()=>{
 });
 
 app.get('/', (req, res)=>{
-    res.send('API en funcionamiento!!!');
+    res.send('API trabajando como debe ser!!!');
 });
 
 // CONFIGURACION DE RUTAS
